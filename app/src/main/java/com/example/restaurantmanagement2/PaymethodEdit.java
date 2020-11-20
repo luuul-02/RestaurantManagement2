@@ -10,6 +10,8 @@ import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import javax.xml.datatype.Duration;
+
 public class PaymethodEdit extends AppCompatActivity {
 
     Button btn_kakao,btn_naver,btn_card,btn_direct;
@@ -19,17 +21,17 @@ public class PaymethodEdit extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.paymethodedit);
 
-        btn_kakao = (Button)findViewById(R.id.togglebtn_kakao);
-        btn_naver = (Button)findViewById(R.id.togglebtn_naver);
-        btn_card = (Button)findViewById(R.id.togglebtn_card);
-        btn_direct = (Button)findViewById(R.id.togglebtn_direct);
+        btn_kakao = (Button)findViewById(R.id.btn_kakao);
+        btn_naver = (Button)findViewById(R.id.btn_naver);
+        btn_card = (Button)findViewById(R.id.btn_card);
+        btn_direct = (Button)findViewById(R.id.btn_direct);
 
-//        btn_kakao.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText("변경되었습니다.");
-//            }
-//        });
+        btn_kakao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"변경되었습니다.", Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 }

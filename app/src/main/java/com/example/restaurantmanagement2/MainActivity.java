@@ -27,23 +27,11 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button viewchange_test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //화면전환 테스트 버튼생성, 화면전환 테스트
-        viewchange_test = (Button)findViewById(R.id.viewchange_test);
-
-        viewchange_test.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,PaymethodEdit.class));
-                finish();
-            }
-        });
 
         //메뉴별/월별/일별 판매량/ 리뷰 페이지로 이동하기 위한 viewpager 설정과 adapter 설정
         ViewPager vp = findViewById(R.id.resmanage_viewpager);

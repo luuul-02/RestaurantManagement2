@@ -38,6 +38,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     //pie 그래프 생성위한 새로운 코드 추가
-    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
     implementation 'com.google.android.gms:play-services-ads:15.0.1'
 }

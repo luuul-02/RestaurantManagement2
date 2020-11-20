@@ -23,49 +23,53 @@ public class Fragment_Day extends Fragment {
     public Fragment_Day() {
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        //fragment_month를 view로 연결
+//fragment_month를 view로 연결
         View view = (View) inflater.inflate(R.layout.fragment_day, container, false);
 
         //Line차트 선언
-        lineChart_day =(LineChart) view.findViewById(R.id.linechart_day);
+        lineChart_day = (LineChart) view.findViewById(R.id.linechart_day);
 
         //Line차트 하단의 범례 표시
-        LineDataSet lineDataSet1 = new LineDataSet(dataValues2(),"Data set 1");
+        LineDataSet lineDataSet1 = new LineDataSet(dataValues2(), "일간 판매량");
 
-
+        //Line차트 데이터 표시
         ArrayList<ILineDataSet> dataSets = new ArrayList<>();
         dataSets.add(lineDataSet1);
 
-        //Line차트에 data 설정
         LineData data = new LineData(dataSets);
         lineChart_day.setData(data);
         lineChart_day.invalidate();
+
+        //Line차트 Line 두께 조정
+        lineDataSet1.setLineWidth(5);
+        //Line차트 데이터 값 텍스트 크기 조정
+        lineDataSet1.setValueTextSize(20);
 
         //fragment_month가 연결되어있는 view를 반환하여 화면에 보여줌
         return view;
     }
 
+    //Line차트 데이터 값
     private ArrayList<Entry> dataValues2() {
         ArrayList<Entry> dataVals = new ArrayList<Entry>();
 
         //x축: 월, y축: 판매금액
-        dataVals.add(new Entry(4f, 0));
-        dataVals.add(new Entry(8f, 1));
-        dataVals.add(new Entry(6f, 2));
-        dataVals.add(new Entry(2f, 3));
-        dataVals.add(new Entry(18f, 4));
-        dataVals.add(new Entry(9f, 5));
-        dataVals.add(new Entry(16f, 6));
-        dataVals.add(new Entry(5f, 7));
-        dataVals.add(new Entry(3f, 8));
-        dataVals.add(new Entry(7f, 10));
-        dataVals.add(new Entry(9f, 11));
+        dataVals.add(new Entry(1, 0));
+        dataVals.add(new Entry(2, 38));
+        dataVals.add(new Entry(3, 4));
+        dataVals.add(new Entry(4, 20));
+        dataVals.add(new Entry(5, 18));
+        dataVals.add(new Entry(6, 12));
+        dataVals.add(new Entry(7, 28));
+
+        //위의 Line차트 데이터 값을 화면에 보여줌
         return dataVals;
+
     }
+
+
 
 }

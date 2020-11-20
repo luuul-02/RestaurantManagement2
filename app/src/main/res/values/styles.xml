@@ -2,8 +2,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <item name="colorPrimary">#fde387</item> //앱 타이틀 바
+        <item name="colorPrimaryDark">#fcdd73</item> //최상단 시간,와이파이
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 

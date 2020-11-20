@@ -20,14 +20,6 @@
         android:textStyle="bold"
         android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="화면전환 test"
-        android:id="@+id/viewchange_test">
-
-    </Button>
-
 
     <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
